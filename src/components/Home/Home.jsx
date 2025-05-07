@@ -1,9 +1,6 @@
-import React, { use } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
+import React from "react";
 
 const Home = () => {
-    const user = use(AuthContext)
-    console.log(user)
   return <div>Home</div>;
 };
 
