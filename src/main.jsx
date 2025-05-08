@@ -10,6 +10,8 @@ import Home from "./components/Home/Home.jsx";
 import AuthProvider from "./contexts/AuthProvider.jsx";
 import PrivateRoute from "./components/Routes/PrivateRoute.jsx";
 import Orders from "./components/Orders/Orders.jsx";
+import Profile from "./components/Profile/Profile.jsx";
+import Dashboard from "./components/Dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,22 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Orders />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard />
           </PrivateRoute>
         ),
       },
